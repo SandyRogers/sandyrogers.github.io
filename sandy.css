@@ -1,0 +1,203 @@
+html {
+	font-size: 20px;
+}
+
+body {
+	background-color: #394458;
+	color: #E6E9EA;
+	font-family: 'Source Sans Pro', sans-serif;
+	padding-bottom: 200px;
+}
+
+a {
+	text-decoration: none;
+	border-bottom: 1px solid #8FBCBC;
+	font-family: 'Droid Sans Mono', monospace;
+}
+
+p > a, blockquote > a, li > a {
+	font-size: 0.85em;
+	padding-left: 0.15em;
+	padding-right: 0.15em;
+}
+
+a:link {
+    color: #8FBCBC;
+}
+
+a:visited {
+    color: #C4ABBF;
+}
+
+a:hover {
+    color: #D8A497;
+}
+
+a:active {
+    color: #8FBCBC;
+}
+
+h1, h2, h3 {
+	font-family: 'Droid Sans Mono', monospace;
+}
+
+h1 {
+	font-size: 2rem;
+	color: #E1C077;
+}
+
+h2 {
+	font-size: 1.5rem;
+	color: #C9826E;
+}
+
+h2::before {
+	content: "# ";
+	opacity: 0.5;
+	margin-left: -2ch;
+}
+
+h3 {
+	font-size: 1.25rem;
+	color: #D7A793;
+}
+
+h3::before {
+	content: "– ";
+	opacity: 0.5;
+	margin-left: -2ch;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0 1.2em;
+}
+
+ul li::before {
+  content: "— ";
+  display: inline-block;
+  width: 1.2em;
+  margin-left: -1.2em;
+}
+
+ul li {
+	margin-bottom: 1em;
+}
+
+blockquote {
+	color: #CAD2D9;
+	border-left: 2px solid #7AAFAD;
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: -15px;
+}
+
+section {
+	margin-top: 60px;
+}
+
+div.container {
+	max-width: 70ch;
+	margin: 0 auto;
+	text-align: left;
+	padding: 30px;
+}
+
+
+#title {
+	font-family: 'Droid Sans Mono', monospace;
+}
+
+#title::before {
+	content: "// ";
+	margin-left: -3ch;
+	font-size: 50%;
+	animation: dotbyebye 1.5s linear;
+	animation-fill-mode: forwards;
+}
+
+@keyframes dotbyebye {
+	0% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 0.3;
+	}
+}
+.dot {
+	animation: dotbyebye 1.5s linear;
+	animation-fill-mode: forwards;
+}
+
+@keyframes addspace {
+	100% {
+		font-size: 24px;
+	}
+	0% {
+		font-size: 0;
+	}
+}
+
+#namespace {
+	animation: addspace 1.5s linear;
+	animation-fill-mode: forwards;
+}
+
+span.mono {
+	font-family: 'Droid Sans Mono', monospace;
+	background-color: #E1C077aa;
+	color: #394458;
+	padding: 0 0.3em;
+}
+
+.service-links {
+	display: flex;
+	margin-top: 1.4em;
+	width: 100%;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.service-link {
+	padding: 0.5em;
+}
+
+.service-logo {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	padding: 2px;
+	border: 1px solid white;
+	background-color: white;
+	color: #394458;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2px;
+	margin-right: 0.3em;
+}
+
+.medium {
+	font-family: serif;
+	font-weight: bold;
+}
+
+.linkedin {
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.github {
+	border-radius: 50%;
+	width: 1.2em;
+	height: 1.2em;
+}
