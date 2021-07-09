@@ -15,10 +15,9 @@
                 <h1 id="title">
                 <span id="sa">sa</span><span class="dot">.</span><span id="ndy">ndy</span><span id="namespace"> </span><span id="roge">roge</span><span class="dot">.</span><span id="rs">rs</span></h1>
                 <p>
-                    I write code, mostly in Python and React.js.
-                    Currently I work at <a href="#Saberr">Saberr</a>.
-                    I’m most interested in the natural language processing part of my job.
-                    Before that, my PhD was <a href="#Astronomy">astrophysics research.</a>
+                    I write code, mostly in Python and Javascript.
+                    I work at <a href="#EBI">EMBL-EBI</a> &mdash; the European Bioinformatics Institute.
+                    I previously did a PhD in <a href="#Astronomy">astrophysics research</a> and then worked at <a href="#Saberr">a startup</a>.
                 </p>
                 <div class="service-links">
                     <div class="service-link">
@@ -36,6 +35,17 @@
                 </p>
                 </header>
                 
+                <section id="ebi-section">
+                    
+                </section>
+                    <a href="#EBI"><h2 id="EBI">EMBL-EBI</h2></a>
+                    <p>
+                        At <a href="https://www.embl.org">EMBL</a>-<a href="https://ebi.ac.uk">EBI</a>, I’m a scientific software web developer on <a href="https://www.ebi.ac.uk/metagenomics/">MGnify</a>, the platform for analysis, archival, and discovery of metagenomic data.
+                    </p>
+                    <p>
+                        Our <a href="https://github.com/EBI-Metagenomics/emgapi">codebase</a> is largely open source, and the web service side of our work is mostly <a href="https://python.org">Python</a>/<a href="https://www.djangoproject.com/">Django</a>, javascript/<a href="https://backbonejs.org">backbone.js</a> and <a href="https://reactjs.org">React.js</a>. EBI run their own computing cluster and data centre, so the service’s underlying data is provided by many tools, languages, and workflows.
+                    </p>
+                </section>
                 <section id='astronomy-section'>
                     <a href="#Astronomy"><h2 id="Astronomy">Astronomy</h2></a>
                     <p>
@@ -60,13 +70,8 @@
                 <section id='saberr-section'>
                     <a href="#Saberr"><h2 id="Saberr">Saberr</h2></a>
                     <p>
-                        I work at <a href="https://www.saberr.com">Saberr</a>, a tech startup focussed on teamwork development.
-                        I do research and data analysis, as well as full-stack software development, to help make our apps (and various other things &mdash; we’re a small company).
-                    </p>
-                    <p>
-                        Our main product is CoachBot, an app that helps teams in some of the ways a coach would.
-                        Since most collaborative work centres around meetings, it has lots of features that turn a calendar event into a a well structured workplace conversation.
-                        I’m most interested in how to detect the signs that people need help with a partciular issue, and how to deliver automated guidance at just the right moment.
+                        I worked on a tech startup, <a href="https://www.saberr.com">Saberr</a>, for 8 years. They focus on teamwork development in the workplace.
+                        I did research and data analysis as well as full-stack web development (and various other things you’d expect in a startup).
                     </p>
                     <p>
                         My favourite feature to work on was <a href="https://medium.com/@sndyrgrs/highlighting-keywords-in-context-with-dependency-parsing-95c1e6a3f334">Smart Tips</a>: a natural language processing feature that annotates users’ meeting agendas with relevant expert guides to help them.
@@ -79,14 +84,31 @@
                         I used <a href="https://spacy.io">SpaCy</a> to develop the NLP for that (and <a href="https://blog.saberr.com/7-experiments-in-natural-language-understanding-for-coachbot-308f79843795">several other prototypes</a> that haven’t yet been needed in production).
                     </p>
                     <p>
-                        I spend most of my time using <a href="https://python.org">Python</a>, <a href="https://www.djangoproject.com/">Django</a>, <a href="https://reactjs.org">React.js</a>, <a href="https://jupyter.org/">Jupyter Lab</a>, and <a href="https://aws.amazon.com/">AWS</a>.
+                        I spent most of my time using <a href="https://python.org">Python</a>, <a href="https://www.djangoproject.com/">Django</a>, <a href="https://reactjs.org">React.js</a>, <a href="https://jupyter.org/">Jupyter Lab</a>, and <a href="https://aws.amazon.com/">AWS</a>.
                     </p>
                 </section>
                 <section id='side-projects-section'>
                     <a href="#SideProjects"><h2 id="SideProjects">Side Projects</h2></a>
+                    <h3>Pan/tilt/zoom tracking camera</h3>
+                    <p>
+                        A hardware &amp; software project, to automatically track an object using a consumer point-and-shoot camera.
+                        The initial motivation is to film a horse and rider performing <a href="https://en.wikipedia.org/wiki/Dressage">Dressage</a>.
+                        Good footage (e.g. for practice review or for virtual compeitions) requires a tight crop even at the other end of an arena.
+                    </p>
+                    <p>
+                        The project uses a <a href="https://www.panasonic.com/uk/consumer/cameras-camcorders/lumix-digital-cameras/superzoom-cameras/dmc-tz70.html">Panasonic TZ70</a>, with reverse-engineered WiFi control and streaming thanks to the camera’s companion-app capabilities. 
+                        A <a href="https://www.raspberrypi.org">Raspberry Pi</a> connects wirelessly to the camera, streams frames over UDP, and controls the pan/tilt via <a href="https://www.monkmakes.com/downloads/instructions_servo_six.pdf">Monkmakes Servosix</a> controller and <a href="https://thepihut.com/products/servo-motor-mg996r-high-torque-metal-gear">TowerPro MG996R</a> servos.
+                        Zoom-level and recording status are controlled by issuing WiFi requests to the camera's cgi command server.
+                        A 4" touchscreen shows a simple GUI interface and preview.
+                        The pan/tilt frame and camera mount are aluminium with steel bearings.
+                    </p>
+                    <p>
+                        The code is all <a href="https://python.org">Python</a>, and uses <a href="https://opencv.org">opencv</a> with a prebuilt caffe deep neural net model to recognise horses and track them in the frame; <a href="https://gpiozero.readthedocs.io/en/stable/">GPIOZero</a> with non-Python timing functions for jitter-less servo control; and <a href="https://lawsie.github.io/guizero/about/">GUIZero</a> for a simple interface.
+                        Various tricks and heuristics are needed to preempt the lag and smooth servo and zoom movements.
+                    </p>
                     <h3>A training journal app for runners</h3>
                     <p>
-                        My current side project is an app that encourages runners to keep a training journal.
+                        An app that encourages runners to keep a training journal.
                         It integrates with <a href="https://www.strava.com">Strava</a> and let’s athletes keep a private diary of their training.
                         The aim is to encourage more honest training notes, and to guide runners to periodise their training to avoid burnout or injury.
                         It’s built using <a href="https://firebase.google.com">Firebase</a> and <a href="https://reactjs.org">React.js</a>.
@@ -101,21 +123,6 @@
                     <p>
                         Each badge has an emoji code on it, like 🐨️🌲️📎️🍎️.
                         People can share their own contact info, and get somebody else's, by keying an emoji code into the web app on their phone.
-                    </p>
-                    <h3>A bot to help with awkward conversations in Slack</h3>
-                    <p>
-                        <a href="https://www.slack.com">Slack</a> is a business chat app.
-                        People use Slack for work, so are almost always not anonymous.
-                        This is good &ndash; Slack encourage <a href="https://slack.com/customer-stories/ocado">transparent communication</a> &ndash; but means that people might not talk about controversial or awkward topics.
-                    </p>
-                    <p>
-                        As a side-project at Saberr, we made a Slack bot called Elephant.chat to help teams talk about their "Elephants in the room".
-                        Anybody could ask Elephant a question they wanted their team to talk about.
-                        Elephant would then ask that question to the whole team, without the originator being named.
-                        Everybody could tell Elephant their answers, which were turned into a wordcloud to aggregate and anonymise the answers.
-                    </p>
-                    <p>
-                        The idea was that Elephant would help people with the tricky part of starting an awkward conversation.
                     </p>
                 </section>
                 <section id="more-section">
